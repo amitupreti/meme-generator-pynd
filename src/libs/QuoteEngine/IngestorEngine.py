@@ -40,4 +40,19 @@ class CSVIngestor(IngestorInterface):
         return quotes
 
 
+class TXTIngestor(IngestorInterface):
+    allowed_extension = ['txt']
 
+    @classmethod
+    def parse(cls, path: str) -> List[QuoteModel]:
+        if not cls.can_ingest(path):
+            raise Exception(f'Cannot ingest {path}')
+        quotes = []
+        with open(path, 'r') as f:
+            data = f.read().splitlines()
+
+        for index, row in data.iterrows():
+            parsed = row.split('-')
+            new_quote = QuoteModel(parsed[0], parsed[1])
+            quotes.append(new_quote)
+        return quotes

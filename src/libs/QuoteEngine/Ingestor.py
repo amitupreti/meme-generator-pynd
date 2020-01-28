@@ -9,6 +9,10 @@ class Ingestor(IngestorInterface):
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
-        if not cls.can_ingest(path):
-            raise Exception(f'Cannot ingest {path}')
-        quotes = []
+        for ingestor in cls.ingestors:
+            if ingestor.can_ingest(path):
+                quotes = ingestor.parse(path)
+                return quotes
+
+        else:
+            raise Exception(f'IngestorEngine is unable to read {path}')
