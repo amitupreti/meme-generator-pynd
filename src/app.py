@@ -20,7 +20,7 @@ def setup():
                    './_data/DogQuotes/DogQuotesCSV.csv']
 
     # TODO: Use the Ingestor class to parse all files in the
-    # quote_files variable
+    #  quote_files variable
     quotes = None
 
     images_path = "./_data/photos/dog/"
