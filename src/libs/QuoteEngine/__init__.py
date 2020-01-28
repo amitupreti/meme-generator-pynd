@@ -1,1 +1,2 @@
-from .IngestorEngine import Ingestor
+from .Ingestor import Ingestor
+from .QuoteEngine import QuoteModel
