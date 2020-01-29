@@ -28,10 +28,11 @@ def setup():
     for f in quote_files:
         quotes.extend(Ingestor.parse(f))
 
-    images_path = "./_data/photos/dog/"
+    images_path = ["./_data/photos/dog/", "./_data/photos/batman/"]
     imgs = []
-    for root, dirs, files in os.walk(images_path):
-        imgs = [os.path.join(root, name) for name in files]
+    for image_path in images_path:
+        for root, dirs, files in os.walk(image_path):
+            imgs = [os.path.join(root, name) for name in files]
 
     return quotes, imgs
 
