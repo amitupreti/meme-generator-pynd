@@ -1,4 +1,5 @@
 NAME
+
     libs.QuoteEngine
 
 PACKAGE CONTENTS
@@ -7,7 +8,7 @@ PACKAGE CONTENTS
     QuoteEngine
 
 
-class Ingestor(libs.QuoteEngine.Interface.IngestorInterface)
+## class Ingestor(libs.QuoteEngine.Interface.IngestorInterface)
      
     Main Ingestor that can automatically parse the supported file types
  
@@ -32,7 +33,7 @@ quote_file = './_data/DogQuotes/DogQuotesCSV.csv'
 quotes = Ingestor.parse(quote_file)
 ```
 
-class QuoteModel(builtins.object)
+## class QuoteModel(builtins.object)
 
     QuoteModel(body, author)
     Quote Model class that creates the default formatting for quotes.
