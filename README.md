@@ -31,6 +31,8 @@ source env/bin/activate
 python3 -m pip install -r requirements.txt
 ```
 
+## Understanding the project
+
 The project consists of two applications
 
 1. The Command line app
