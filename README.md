@@ -41,15 +41,15 @@ The project consists of two applications
 #### Command Line APP
 
    It lets user create their own personalized Memes.
-   ### Instructions for command line app
+   ##### Instructions for command line app
    * Navigate inside the project directory and activate the virtual environment
    ```sh
    cd meme-generator-pynd
    source env/bin/activate
    cd src
-    ```
+   ```
     
-    * Pass the Meme body, Author, Image path(local) as arguments
+   *  Pass the Meme body, Author, Image path(local) as arguments
       If the arguments are not passed by users and random quote is selected.
       ``` sh
       python3 meme.py --body "Speak low if you speak love." --author "Shakespeare" --path "./pathtoyourimage"
