@@ -9,9 +9,13 @@ The goal of this project is to build a "meme generator"—a multimedia applicati
 ### Sample Memes
 
 ![sample MEME](./src/tmp/2211_curr_meme.jpg)
+
 ![sample MEME](./src/tmp/4748_curr_meme.jpg)
+
 ![sample MEME](./src/tmp/9860_curr_meme.jpg)
+
 ![sample MEME](./src/tmp/curr_meme.jpg)
+
 
 
 ### Setting up project in your machine
@@ -36,7 +40,7 @@ python3 -m pip install -r requirements.txt
 The project consists of two applications
 
 1. [The Command line app](#command-line-app)
-2. Flask App
+2. [Flask App](#flask-app)
 
 #### Command Line APP
 
@@ -55,3 +59,29 @@ The project consists of two applications
       python3 meme.py --body "Speak low if you speak love." --author "Shakespeare" --path "./pathtoyourimage"
       ```
       ![sample](https://i.ibb.co/LpBZyWd/image.png)
+
+
+
+#### Flask APP
+
+   It provides users with a web interface where they can generate a random MEME or pass their own image_url, body and author to create they own MEME
+   ##### Instructions for Flask app
+   * Navigate inside the project directory and activate the virtual environment
+   ```sh
+   cd meme-generator-pynd
+   source env/bin/activate
+   cd src
+   ```
+    
+   *  Export our app.py to the environment variable `FLASK_APP`
+      ``` sh
+      export FLASK_APP=app
+      ```
+   * Run the Flask APP
+   ```sh
+   flask run
+   ```
+      ![Run the flask app](https://i.ibb.co/VpHhwkb/image.png)
+      
+      ![Web interface Demo](./src/tmp/curr_meme.jpg)
+
