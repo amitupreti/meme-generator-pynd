@@ -3,8 +3,8 @@ import os
 import random
 
 # @TODO Import your Ingestor and MemeEngine classes
-from src.libs.MemeEngine import MemeEngine
-from src.libs.QuoteEngine import Ingestor, QuoteModel
+from .libs.MemeEngine import MemeEngine
+from .libs.QuoteEngine import Ingestor, QuoteModel
 
 
 def generate_meme(path=None, body=None, author=None):
@@ -13,7 +13,7 @@ def generate_meme(path=None, body=None, author=None):
     quote = None
 
     if path is None:
-        images = "./src/_data/photos/dog/"
+        images = "./_data/photos/dog/"
         imgs = []
         for root, dirs, files in os.walk(images):
             imgs = [os.path.join(root, name) for name in files]
@@ -23,10 +23,10 @@ def generate_meme(path=None, body=None, author=None):
         img = path[0]
 
     if body is None:
-        quote_files = ['./src/_data/DogQuotes/DogQuotesTXT.txt',
-                       './src/_data/DogQuotes/DogQuotesDOCX.docx',
-                       './src/_data/DogQuotes/DogQuotesPDF.pdf',
-                       './src/_data/DogQuotes/DogQuotesCSV.csv']
+        quote_files = ['./_data/DogQuotes/DogQuotesTXT.txt',
+                       './_data/DogQuotes/DogQuotesDOCX.docx',
+                       './_data/DogQuotes/DogQuotesPDF.pdf',
+                       './_data/DogQuotes/DogQuotesCSV.csv']
         quotes = []
         for f in quote_files:
             quotes.extend(Ingestor.parse(f))
@@ -37,7 +37,7 @@ def generate_meme(path=None, body=None, author=None):
             raise Exception('Author Required if Body is Used')
         quote = QuoteModel(body, author)
 
-    meme = MemeEngine('./src/tmp/')
+    meme = MemeEngine('./tmp/')
     path = meme.make_meme(img, quote.body, quote.author)
     return path
 

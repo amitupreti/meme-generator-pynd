@@ -7,10 +7,10 @@ class MemeEngine:
         self.output_dir = output_dir
 
     def make_meme(self, img_path: str, text: str, author: str, width: int = 500) -> str:
-        outputPath = self.output_dir + 'curr_meme.jpg'
+        output_path = self.output_dir + str(randint(0, 9999)) + '_curr_meme.jpg'
         image = Image.open(img_path)
         image = image.crop((0, 0, width, width))
-        font = ImageFont.truetype(font="./src/static/GrandHotel-Regular.otf", size=36)
+        font = ImageFont.truetype(font="./static/GrandHotel-Regular.otf", size=36)
         draw = ImageDraw.Draw(image, 'RGBA')
         random_x = randint(0, 100)
         random_y = randint(0, 400)
@@ -18,5 +18,5 @@ class MemeEngine:
                        outline=(255, 255, 255))
         draw.text((random_x, random_y), text, (255, 255, 255), font=font)
         draw.text((random_x + 15, random_y + 35), '-' + author, (255, 255, 255), font=font)
-        image.save(outputPath)
-        return outputPath
+        image.save(output_path)
+        return output_path

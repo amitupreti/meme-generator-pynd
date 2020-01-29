@@ -2,8 +2,8 @@ import argparse
 import os
 import random
 
-from src.libs.MemeEngine import MemeEngine
-from src.libs.QuoteEngine import Ingestor
+from .libs.MemeEngine import MemeEngine
+from .libs.QuoteEngine import Ingestor
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate your own MEME")
@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     # if image is not passed by user
     if image is None:
-        images = "./src/_data/photos/dog/"
+        images = "./_data/photos/dog/"
         imgs = []
         for root, dirs, files in os.walk(images):
             imgs = [os.path.join(root, name) for name in files]
@@ -29,10 +29,10 @@ if __name__ == "__main__":
 
     # handle missing quotes and author
     if quote is None or author is None:
-        quote_files = ['./src/_data/DogQuotes/DogQuotesTXT.txt',
-                       './src/_data/DogQuotes/DogQuotesDOCX.docx',
-                       './src/_data/DogQuotes/DogQuotesPDF.pdf',
-                       './src/_data/DogQuotes/DogQuotesCSV.csv']
+        quote_files = ['./_data/DogQuotes/DogQuotesTXT.txt',
+                       './_data/DogQuotes/DogQuotesDOCX.docx',
+                       './_data/DogQuotes/DogQuotesPDF.pdf',
+                       './_data/DogQuotes/DogQuotesCSV.csv']
 
         quotes = []
         for f in quote_files:
@@ -44,6 +44,6 @@ if __name__ == "__main__":
         if author is None:
             author = my_quote.author
 
-    meme = MemeEngine('src/tmp/')
+    meme = MemeEngine('./tmp/')
     my_meme = meme.make_meme(img_path=image, text=quote, author=author)
     print(f'Here is your Meme: {my_meme}')

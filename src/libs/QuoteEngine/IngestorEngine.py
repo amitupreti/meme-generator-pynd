@@ -71,7 +71,7 @@ class PDFIngestor(IngestorInterface):
         if not cls.can_ingest(path):
             raise Exception(f'Cannot ingest {path}')
         quotes = []
-        temp_file = f'./src/tmp/{random.randint(0, 1000000)}quotes.txt'
+        temp_file = f'./tmp/{random.randint(0, 1000000)}quotes.txt'
         call = subprocess.call(['pdftotext', path, temp_file])
 
         # a binary line in the pdf is causing error while reading
