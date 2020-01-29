@@ -8,11 +8,11 @@ The goal of this project is to build a "meme generator"—a multimedia applicati
 
 ### Sample Memes
 
-![sample MEME](./src/tmp/2211_curr_meme.jpg)
+![sample MEME](./src/tmp/5887_curr_meme.jpg)
 
 ![sample MEME](./src/tmp/4748_curr_meme.jpg)
 
-![sample MEME](./src/tmp/9860_curr_meme.jpg)
+![sample MEME](./src/tmp/639_curr_meme.jpg)
 
 ![sample MEME](./src/tmp/curr_meme.jpg)
 
