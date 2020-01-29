@@ -7,6 +7,11 @@ PACKAGE CONTENTS
     Ingestor
     QuoteEngine
 
+Package Dependencies
+     
+     pandas
+     python-docx
+     
 
 ## class Ingestor(libs.QuoteEngine.Interface.IngestorInterface)
      

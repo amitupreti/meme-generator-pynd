@@ -6,6 +6,9 @@ PACKAGE CONTENTS
 
     MemeGenerator
 
+Package Dependencies
+     
+     pillow
 
 
 ## class MemeEngine(builtins.object)
