@@ -84,5 +84,5 @@ The project consists of two applications
    
    ![Run the flask app](https://i.ibb.co/VpHhwkb/image.png)
       
-   ![Web interface Demo](./src/tmp/curr_meme.jpg)
+   ![Web interface Demo](https://i.ibb.co/Sv2HCrw/image.png)
 
