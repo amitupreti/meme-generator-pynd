@@ -35,10 +35,10 @@ python3 -m pip install -r requirements.txt
 
 The project consists of two applications
 
-1. The Command line app
+1. [The Command line app](#command-line-app)
 2. Flask App
 
-1.Command Line APP
+#### 1.Command Line APP
 
    It lets user create their own personalized Memes.
    ### Instructions for command line app
