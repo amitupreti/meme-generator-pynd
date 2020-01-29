@@ -75,13 +75,14 @@ The project consists of two applications
     
    *  Export our app.py to the environment variable `FLASK_APP`
       ``` sh
-      export FLASK_APP=app
+       export FLASK_APP=app
       ```
-   * Run the Flask APP
-   ```sh
-   flask run
-   ```
-      ![Run the flask app](https://i.ibb.co/VpHhwkb/image.png)
+   *  Run the Flask APP
+      ```sh
+       flask run
+       ```
+   
+   ![Run the flask app](https://i.ibb.co/VpHhwkb/image.png)
       
-      ![Web interface Demo](./src/tmp/curr_meme.jpg)
+   ![Web interface Demo](./src/tmp/curr_meme.jpg)
 
