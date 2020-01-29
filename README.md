@@ -2,8 +2,7 @@
 
 Check out the live version in heroku
 
-![https://memegeneratorpy.herokuapp.com/](https://memegeneratorpy.herokuapp.com/)
-
+https://memegeneratorpy.herokuapp.com/
 
 ## Udacity - Intermediate Python Nanodegree
 
