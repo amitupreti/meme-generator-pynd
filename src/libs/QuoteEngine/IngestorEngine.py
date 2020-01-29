@@ -11,10 +11,16 @@ import docx
 
 
 class DocxIngestor(IngestorInterface):
+    """Parses docs files"""
     allowed_extension = ['docx']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """
+        Parses the DOCx file and Returns the QuoteModel Object.
+        :param path: path to Docx file
+        :return: QuoteModel object
+        """
         if not cls.can_ingest(path):
             raise Exception(f'Cannot ingest {path}')
         quotes = []
@@ -29,10 +35,16 @@ class DocxIngestor(IngestorInterface):
 
 
 class CSVIngestor(IngestorInterface):
+    """Parses CSV files."""
     allowed_extension = ['csv']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """
+        Parses the csv file and Returns the QuoteModel Object.
+        :param path: path to csv file
+        :return: QuoteModel object
+        """
         if not cls.can_ingest(path):
             raise Exception(f'Cannot ingest {path}')
         quotes = []
@@ -45,10 +57,16 @@ class CSVIngestor(IngestorInterface):
 
 
 class TextIngestor(IngestorInterface):
+    """Parses txt files."""
     allowed_extension = ['txt']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """
+        Parses the text file and Returns the QuoteModel Object.
+        :param path: path to text file
+        :return: QuoteModel object
+        """
         if not cls.can_ingest(path):
             raise Exception(f'Cannot ingest {path}')
         quotes = []
@@ -64,10 +82,16 @@ class TextIngestor(IngestorInterface):
 
 
 class PDFIngestor(IngestorInterface):
+    """Parses PDF files."""
     allowed_extension = ['pdf']
 
     @classmethod
     def parse(cls, path: str) -> List[QuoteModel]:
+        """
+        Parses the PDF file and Returns the QuoteModel Object.
+       :param path: path to PDF file
+       :return: QuoteModel object
+       """
         if not cls.can_ingest(path):
             raise Exception(f'Cannot ingest {path}')
         quotes = []

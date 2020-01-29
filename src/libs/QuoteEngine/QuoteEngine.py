@@ -1,4 +1,6 @@
 class QuoteModel:
+    """Quote Model class that creates the default formatting for quotes."""
+
     def __init__(self, body, author):
         self.body = body
         self.author = author.capitalize()
