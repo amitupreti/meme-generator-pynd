@@ -2,8 +2,8 @@ import argparse
 import os
 import random
 
-from .libs.MemeEngine import MemeEngine
-from .libs.QuoteEngine import Ingestor
+from libs.MemeEngine import MemeEngine
+from libs.QuoteEngine import Ingestor
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Generate your own MEME")

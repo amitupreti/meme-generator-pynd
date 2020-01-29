@@ -5,6 +5,10 @@
 The goal of this project is to build a "meme generator"—a multimedia application to dynamically generate memes, including an image with an overlaid quote. It’s not that simple though! Your content team spent countless hours writing quotes in a variety of filetypes. You could manually copy and paste these quotes into one standard format – but you’re going to over-engineer a solution to load quotes from each file to show off your fancy new Python skills. 
 
 ![demo gif](./demo.gif)
+![sample MEME](./src/tmp/2211_curr_meme.jpg)
+![sample MEME](./src/tmp/4748_curr_meme.jpg)
+![sample MEME](./src/tmp/9860_curr_meme.jpg)
+![sample MEME](./src/tmp/curr_meme.jpg)
 
 ## Starter Code Overview
 
